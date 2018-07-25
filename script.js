@@ -47,11 +47,12 @@ function append(parent, el) {
 }
 
 $("#submit").click(function(){
+    $("#dogs").empty();
 const a = document.getElementById("1").value;
 alert("Here are images of " + a + "s")
 console.log(a);
     
-const ul = document.getElementById("authors");
+const ul = document.getElementById("dogs");
 
 const url = "https://dog.ceo/api/breed/" + a + "/images";
 // const url = "https://dog.ceo/api/breed/poodle/images";
@@ -62,15 +63,17 @@ fetch(url)
     let dog = data.message;
     console.log(dog)
 
-    for ( var i = 0; i < 10; i++) {
+    for ( var i = 0; i < 30; i++) {
         
-        let li = createNode('li');
+        // let li = createNode('li');
         let img = createNode('img');
 
         img.src = dog[i];
-
-        append(li, img);
-        append(ul,li);
+        img.style = "width:100px; height:100px";
+        
+        // append(li, img);
+        // append(ul,li);
+        append(ul,img);
     }
 })
 
