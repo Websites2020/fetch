@@ -6,8 +6,9 @@ function append(parent, el) {
     return parent.appendChild(el);
 }
 
-$("#submit").click(function(){
-    $("#dogs").empty();
+function myFunction() {
+    document.getElementById("dogs").innerHTML = "";
+
 const a = document.getElementById("1").value;
 alert("Here are images of " + a + "s")
 console.log(a);
@@ -33,4 +34,4 @@ fetch(url)
     }
 })
 
-});
+};
