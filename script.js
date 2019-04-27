@@ -10,7 +10,7 @@ function myFunction() {
     document.getElementById("dogs").innerHTML = "";
 
 const a = document.getElementById("1").value;
-alert("Here are images of " + a + "s")
+
 console.log(a);
     
 const ul = document.getElementById("dogs");
